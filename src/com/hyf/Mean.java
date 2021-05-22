@@ -4,18 +4,15 @@ package com.hyf;
  * Created by hyf on 2021/5/22 2:32
  */
 public class Mean {
-    double sum;
-    int length;
+    private double mean;
 
+    // 直接设置mean
     public Mean(NumberArr arr) {
-        sum = arr.getSum();
-        length = arr.getLength();
+        mean = arr.getTrimSum() != 0 && arr.getTrimLength() > 0 ? arr.getTrimSum() / arr.getTrimLength() : 0;
     }
 
+    // 返回mean
     public double getMean() {
-        if (sum != 0 && length > 0) {
-            return sum / length;
-        }
-        return 0;
+        return mean;
     }
 }
