@@ -13,7 +13,7 @@ public class Mean {
     }
 
     public double getMean() {
-        if (sum != 0 && length >= 1) {
+        if (sum != 0 && length > 0) {
             return sum / length;
         }
         return 0;

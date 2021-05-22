@@ -9,8 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         while (!s.equals("0")) {
-            double d = Double.parseDouble(s);
-            arr.add(d);
+            arr.add(s);
             s = sc.nextLine();
         }
         Mean mean = new Mean(arr);
